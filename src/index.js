@@ -52,8 +52,8 @@ function decodedToMorse(symbol) {
     let code = ''
     for(let j = 0; j < symbol.length; j = j + 2) {
         let char = symbol[j] + symbol[j + 1]
-        if (char === '10') code += '.'
-        else if (char === '11') code += '-'
+        code += (char === '10') ? '.' : 
+            (char === '11') ? '-' : ''
     }
     return code
 }
